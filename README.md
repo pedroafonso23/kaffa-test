@@ -8,14 +8,14 @@
 
 ## Table of Contents
 
-- [Installation and Setup](#installationandsetup)
+- [Installation](#installation)
 - [Exercices](#exercices)
-- [Full Test Sheet](#fulltestsheet)
+- [Test](#test)
 - [License](#license)
 
 ---
 
-## Installation and Setup
+## Installation
 
 - Install <a href="https://nodejs.org/en/">NodeJS</a>
 
@@ -41,9 +41,11 @@ $ npm start
 
 [![](https://i.imgur.com/yijBQgk.png)]()
 
-- You can access all the pages and exercices reponses using the upper menu:
+- You can access all the pages and exercices reponses using the upper menu. Also, note that title of the page, on the browser tab, shows which exercices you are accessing. 
 
 [![](https://i.imgur.com/UtoNVio.png)]()
+
+![Recordit GIF](http://g.recordit.co/5Wjya55yS5.gif)
 
 ---
 
@@ -197,7 +199,7 @@ server.get('/clock', function (req, res) {
 
 - This exercice is pretty much self explanatory. I chose the engineering notation to make the diagram and I imagined 4 tables, Client, Order, Product_Order and Product. I had the necessity to add the Product_Order table mainly to add the information of how many of each product is in the order. So lets say, If I place an order of 1 apple, 2 banannas and 3 oranges, I have only one Order table, but associated with three Product_Order tables, one for each product. 
 
-## Full Test Sheet
+## Test
 
 This is the full test I received from Kaffa Mobile:
 
