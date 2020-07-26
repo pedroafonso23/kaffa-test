@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Kaffa Test - Exercice 5</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+
+        <h1>Really Simple To Do List</h1>
+        <h1>Write a task below and we will save it for you!</h1>
+
+        <form action='/savetask' method='POST'>
+            <input type="text" name="task" required="required">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="list">
+
+            {% if total > 0 %}
+
+                {% for item in tasks %}
+                    <div class="task">
+                        <h2>{{ item.task }}</h2>
+
+                         <form  action='/deletetask'  method="POST">
+                            <input class="pseudo" type="text" name="id" value="{{ item.id }}">
+                            <button type="submit">+</button>
+                        </form>
+
+                    </div>
+                {% endfor %}
+
+            {% else %}
+                <h2><strong>No</strong> tasks registered!</h2>
+            {% endif %}
+        </div>             
+    </div>
+
+{% endblock %}

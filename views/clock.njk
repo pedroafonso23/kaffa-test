@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Kaffa Test - Exercices 6 & 7</title>
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper" class="clock">
+        <h1>Date and time at your location:</h1>
+        <h1 id="local-time"></h1>
+        <h1>Date and time UTC:</h1>
+        <h1 id="utc-time">{{ time.currentDateTime }}</h1>
+        <h2>Click on "World Clock" to update</h2>
+        <h1>Feel free to use our UTC clock API using the URL:</h1>
+        <a target="_blank" href="http://localhost:3000/time">http://localhost:3000/time</a>
+    </div>
+
+    <script src="/script-clock.js"></script>
+
+{% endblock %}

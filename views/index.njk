@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Kaffa Test - Applicant</title>
+    
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ data_index.avatar_url }}" alt="Profile picture {{ data_index.name }}">
+        <h1>{{ data_index.name }}</h1>
+        <h2>{{ data_index.role }}</h2>
+        <p>{{ data_index.description }}</a></p>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in data_index.links %}
+            <a target="_blank" href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

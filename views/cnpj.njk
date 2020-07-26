@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Kaffa Test - Exercices 1 & 2</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <h1>Enter a CNPJ and we will validate it!</h1>
+        <input type="text" id="input_cnpj" placeholder="Type CNPJ here">
+        <button onclick="validateCNPJ()">Validate</button>
+        <h2 id="result_cnpj"></h2>
+    </div>
+
+    <script src="/script-cnpj.js"></script>
+
+{% endblock %}
