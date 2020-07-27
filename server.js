@@ -130,3 +130,20 @@ server.use(function (req, res) {
 server.listen(5005, function () {
     console.log('Server is running')
 })
+
+
+// Update the Clock server with the current time
+const fs = require('fs')
+const fileName = './db.json'
+const file = require(fileName)
+
+axios.get('http://worldclockapi.com/api/json/utc/now').then((response) => {
+
+    let t = response.data.currentDateTime
+
+    file.time.currentDateTime = `${t}`
+
+    fs.writeFile(fileName, JSON.stringify(file, null, 2), function writeJSON(err) {
+        if (err) return console.log(err)
+    })
+})
