@@ -214,7 +214,7 @@ server.get('/clock', function (req, res) {
 
 [![](https://i.imgur.com/tJIM9OT.png)]()
 
-- To make the server I used the <a href="https://github.com/typicode/json-server">JSON Server</a>. Take a look at the bottom of the `server.js` file and you will see the implementation of the function that updates the `db.json` file, which contains the UTC time. I used `fs API` (file system) to write the current time in the `db.json` file. 
+- To make the server I used the <a href="https://github.com/typicode/json-server">JSON Server</a>. Take a look at the bottom of the `server.js` file and you will see the implementation of the function that updates the `db.json` file, which contains the UTC time. I used <a href="https://nodejs.org/api/fs.html">fs API</a> (file system) to write the current time in the `db.json` file. 
 
 ```javascript
 const fs = require('fs')
