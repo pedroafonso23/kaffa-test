@@ -42,7 +42,7 @@ $ npm install -g json-server
 $ npm start
 ```
 
-- **If** you get an error, execute this command to run only the main server:
+- **Only if** you get an error, execute instead this command to run only the main server:
 
 ```shell
 $ npm run server
