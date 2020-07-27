@@ -150,6 +150,8 @@ if (inputCNPJ.value.match(/(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)|(^\d{14}$)/)) {
 
 ![Recordit GIF](http://g.recordit.co/hBp7ENsJPE.gif)
 
+- Note that intersections between the rectangles `red` and `green` will be colored `yellow`, intersections between the rectangles `red` and `blue` will be colored `purple`, intersections between the rectangles `green` and `blue` will be colored `cyan` and intersections between the three rectangles will be colored `white`.
+
 - Take a look on the file `script-rectangles.js`. My solution was to create the grid as a table, row by row, column by column, with the function `clickableGrid()`. This function creates the `tr` and `td` HTML elements and also assigns a value, and ID and an `eventListener` to each cell. 
 
 - When you click a cell, you call the function `selectCell()`, which will only be executed 6 times. This function makes use of a `Switch` structure to color the cells that are clicked, and define the rectangles, by adding classes to the element. So, each cell can have none, one of each, or any combination of the classes `red`, `green` and `blue`.
