@@ -42,7 +42,7 @@ $ npm install -g json-server
 $ npm start
 ```
 
-- **Only if** you get an error, execute instead this command to run only the main server:
+- **Only if** you get an error, execute instead this command to run only the main server without the clock API:
 
 ```shell
 $ npm run server
@@ -214,13 +214,30 @@ server.get('/clock', function (req, res) {
 
 [![](https://i.imgur.com/tJIM9OT.png)]()
 
-- To make the server I used the <a href="https://github.com/typicode/json-server">JSON Server</a>. 
+- To make the server I used the <a href="https://github.com/typicode/json-server">JSON Server</a>. Take a look at the bottom of the `server.js` file and you will see the implementation of the function that updates the `db.json` file, which contains the UTC time. I used `fs API` (file system) to write the current time in the `db.json` file. 
 
-- Take a look at the `package.json` file and you will see that I am running two scripts in parallel (using npm-run-all). This way, executing `npm start` will run the server on port 5005 and the clock JSON server on port 3000. 
+```javascript
+const fs = require('fs')
+const fileName = './db.json'
+const file = require(fileName)
+
+axios.get('http://worldclockapi.com/api/json/utc/now').then((response) => {
+
+    let t = response.data.currentDateTime
+
+    file.time.currentDateTime = `${t}`
+
+    fs.writeFile(fileName, JSON.stringify(file, null, 2), function writeJSON(err) {
+        if (err) return console.log(err)
+    })
+})
+```
+
+- Also, take a look at the `package.json` file and you will see that I am running two scripts in parallel (using npm-run-all). This way, executing `npm start` will run the server on port 5005 and the clock JSON server on port 3000. 
 
 [![](https://i.imgur.com/SLG2K9M.png)]()
 
-- You can click on the link to access the JSON server.
+- You can click on the link to access the API, with the current UTC time.
 
 ![Recordit GIF](http://g.recordit.co/suEGbM1DBF.gif)
 
