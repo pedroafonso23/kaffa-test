@@ -9,6 +9,7 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Technologies](#technologies)
 - [Exercices](#exercices)
 - [Test](#test)
 - [License](#license)
@@ -19,7 +20,7 @@
 
 - Install <a href="https://nodejs.org/en/">NodeJS</a>
 
-- <a href="https://github.com/pedroafonso23/kaffa-test">Clone this repo</a> to your local machine
+- <a href="https://github.com/pedroafonso23/kaffa-test">Clone this repo</a> to your local machine (preferably on **C:/**)
 
 - Open the command prompt and navigate to the repository root
 
@@ -29,10 +30,22 @@
 $ npm install
 ```
 
+- Execute this command to install JSON Server:
+
+```shell
+$ npm install -g json-server
+```
+
 - Execute this command to run the application
 
 ```shell
 $ npm start
+```
+
+- **If** you get an error, execute this command to run only the main server:
+
+```shell
+$ npm run server
 ```
 
 - Open your browser and access the local host on port 5005 :point_right: <a href="http://localhost:5005">`http://localhost:5005`</a>
@@ -46,6 +59,32 @@ $ npm start
 [![](https://i.imgur.com/UtoNVio.png)]()
 
 ![Recordit GIF](http://g.recordit.co/5Wjya55yS5.gif)
+
+- :heavy_exclamation_mark: If you have any problems on installing or running the application, please fell free to contact me by any means.
+  - Call me or send a WhatsApp message: +55 35 9 9151 6117
+  - Send an e-mail: pedroafonso23@yahoo.com.br
+  - <a href="https://www.facebook.com/pedroafonso.ferraz.7/">Facebook</a> 
+  - <a href="https://www.linkedin.com/in/pedroafonsoferraz/">LinkedIn</a> 
+  - <a href="https://www.linkedin.com/in/pedroafonsoferraz/">LinkedIn</a>
+  - <a href="https://www.instagram.com/pedroafonsocfl/?hl=pt-br">Instagram</a>
+
+---
+
+## Technologies
+
+To develop the present application, I used the following technologies and resources:
+
+- NodeJS
+- JavaScript
+- HTML5
+- CSS3
+- Nodemon (auto update the server, useful while developing)
+- Nunjucks (template engine to reuse and add powerful resources to HTML, like FOR loops)
+- Npm run all (to easily run more than one server in parallel)
+- Express (powerful framework for NodeJS that helps to create servers and routes)
+- SQLite 3 (SQL database)
+- Axios (promise based HTTP client for the browser and NodeJS, used for API requests)
+- JSON Server (easily create a REST API)
 
 ---
 
