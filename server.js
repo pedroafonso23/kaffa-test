@@ -18,7 +18,7 @@ server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
     express: server,
-    autoescape: false, // Permite mandar html por variavel
+    autoescape: false,
     noCache: true
 })
 
@@ -56,6 +56,8 @@ server.post('/savetask', (req, res) => {
     const query = `INSERT INTO tasks (task) VALUES (?);`
     const values = [req.body.task]
 
+    db.run(query, values, afterInsertData)
+
     function afterInsertData(err) {
         if(err) {
             console.log(err)
@@ -66,8 +68,6 @@ server.post('/savetask', (req, res) => {
 
         return res.redirect('/todolist')
     }
-
-    db.run(query, values, afterInsertData)
     
 })
 
@@ -126,11 +126,10 @@ server.use(function (req, res) {
     res.status(404).render("not-found")
 })
 
-// Server listening to the door 5005
+// Server listening to the port 5005
 server.listen(5005, function () {
     console.log('Server is running')
 })
-
 
 // Update the Clock server with the current time
 const fs = require('fs')
