@@ -65,7 +65,6 @@ $ npm run server
   - Send an e-mail: pedroafonso23@yahoo.com.br
   - <a href="https://www.facebook.com/pedroafonso.ferraz.7/">Facebook</a> 
   - <a href="https://www.linkedin.com/in/pedroafonsoferraz/">LinkedIn</a> 
-  - <a href="https://www.linkedin.com/in/pedroafonsoferraz/">LinkedIn</a>
   - <a href="https://www.instagram.com/pedroafonsocfl/?hl=pt-br">Instagram</a>
 
 ---
@@ -142,7 +141,7 @@ if (inputCNPJ.value.match(/(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)|(^\d{14}$)/)) {
 
 [![](https://i.imgur.com/SEpNE2B.png)]()
 
-- Now you have to click on a total of 6 cells of the grid, to draw 3 rectangles. The first 2 click will define the **red** rectangle, the following two click will define the **green** one and finally the last two clicks will define the **blue** rectangle.
+- Now you have to click on a total of 6 cells of the grid, to draw 3 rectangles. The first 2 clicks will define the **red** rectangle, the following two clicks will define the **green** one and finally the last two clicks will define the **blue** rectangle.
 
 [![](https://i.imgur.com/hsuopIc.png)]()
 
